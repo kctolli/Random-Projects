@@ -1,6 +1,4 @@
-def recur_fibo(n):
-    x = (n if n <= 1 else recur_fibo(n-1) + recur_fibo(n-2))
-    return x
+def recur_fibo(n): return (n if n <= 1 else recur_fibo(n-1) + recur_fibo(n-2))
 
 def main():
     nterms = 0
