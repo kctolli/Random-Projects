@@ -1,12 +1,5 @@
 #include "pitches.h"
-
-// Set Pins
-const int LED_PIN_ON = 3;  
-const int LED_PIN_OFF = 4; 
-const int BUTTON_PIN = 7; 
-const int BUZZER_PIN = 8; 
-const int LED_PIN = 9; 
-const int DOOR_SENSOR_PIN = 13; 
+#include "pins.h"
  
 // notes in the melody:
 int melody[] = {
@@ -32,28 +25,21 @@ int noteDurations[] = {
   4, 4
 };
 
-int buttonState = 0;
-int doorState = 0;
-
 void setup() {
-  Serial.begin(9600);                // initialize serial
+  Serial.begin(9600); // initialize serial
   // set arduino pin to input pull-up mode
   pinMode(BUTTON_PIN, INPUT_PULLUP); 
-  pinMode(DOOR_SENSOR_PIN, INPUT_PULLUP);
   // set arduino pin to output mode
   pinMode(BUZZER_PIN, OUTPUT);       
   pinMode(LED_PIN, OUTPUT); 
-  pinMode(LED_PIN_ON, OUTPUT);
-  pinMode(LED_PIN_OFF, OUTPUT); 
 }
 
 void loop() {
-  door();
   button();
 }
 
 void button() {
-  buttonState = digitalRead(BUTTON_PIN); // read new state
+  int buttonState = digitalRead(BUTTON_PIN); // read new state
   
   if (buttonState == LOW) { // button is pressed
     Serial.println("The button is being pressed");
@@ -61,20 +47,6 @@ void button() {
   } else {
     Serial.println("The button is not pressed"); 
     digitalWrite(LED_PIN, LOW);
-  }
-}
-
-void door() {
-  doorState = digitalRead(DOOR_SENSOR_PIN); // read state
-
-  if (doorState == HIGH) {
-    Serial.println("The door is open");
-    digitalWrite(LED_PIN_ON, HIGH); // turn on LED
-    digitalWrite(LED_PIN_OFF, LOW);  // turn off LED
-  } else {
-    Serial.println("The door is closed");
-    digitalWrite(LED_PIN_ON, LOW);  // turn off LED
-    digitalWrite(LED_PIN_OFF, HIGH); // turn on LED
   }
 }
 
@@ -87,7 +59,7 @@ void buzzer() {
     //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
     int noteDuration = 1000 / noteDurations[thisNote];
     tone(BUZZER_PIN, melody[thisNote], noteDuration);
-    digitalWrite(LED_PIN, HIGH); // turn on LED
+    digitalWrite(LED_PIN, HIGH);
     
     // Console monitor
     Serial.println(thisNote);
