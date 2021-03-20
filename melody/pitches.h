@@ -1,7 +1,14 @@
+// Set Pins
+
+#define buzzer   8 
+
 /*************************************************
  * Public Constants
  * Tones
  *************************************************/
+
+#define wholenote  (60000 * 4) / tempo
+#define notes      sizeof(melody) / sizeof(melody[0]) / 2
 
 #define NOTE_B0  31
 #define NOTE_C1  33
