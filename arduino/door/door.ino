@@ -41,7 +41,6 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(button); // read new state
-
   (buttonState == LOW) ? buzz() : digitalWrite(led, LOW);
 }
 
