@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+function kaput(int fizz, int buzz, int limit){
+	var text = "";
+
+	for (var i = 1; i <= limit; i++) {
+		if(i != 1){text += ", ";}
+
+		if (i % fizz == 0 && i % buzz == 0) { text += "FizzBuzz"; }
+		else if (i % fizz == 0) { text += "Fizz"; }
+		else if (i % buzz == 0) { text += "Buzz"; }
+		else { text += i; }
+	}
+	return text;
+}
+
+document.getElementById("demo").innerHTML = kaput(2, 3, 11);
+</script>
+
+</body>
+</html>

@@ -12,7 +12,7 @@ namespace FizzBuzz
   {
     static void Main(string[] args)
     {
-    	string kaput = Kaput(2,3,11);
+    	string kaput = Kaput(2, 3, 11);
     	Console.WriteLine(kaput);
     }
 
@@ -23,10 +23,10 @@ namespace FizzBuzz
     	for (int i = 1; i <= limit; i ++) {
     		if(i != 1){kaput += ", ";}
 
-      		if (i % fizz == 0 && i % buzz == 0) {kaput += "FizzBuzz";}
-			else if (i % fizz == 0) {kaput += "Fizz";}
-			else if (i % buzz == 0) {kaput += "Buzz";}
-			else {kaput += i.ToString();}
+      	if (i % fizz == 0 && i % buzz == 0) {kaput += "FizzBuzz";}
+  			else if (i % fizz == 0) {kaput += "Fizz";}
+  			else if (i % buzz == 0) {kaput += "Buzz";}
+  			else {kaput += i.ToString();}
       }
 
       return kaput;
