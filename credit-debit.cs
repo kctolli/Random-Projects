@@ -14,7 +14,6 @@ class Solution
         
         
         Please implement the ProcessTransactions(..) method. You may only alter the code in the ProcessTransactions(..) method. Feel free to review the rest of the code, but please do not alter it. 
-        
         */
 
     private static int ProcessTransactions(int startingBalance, String[] transactions)
