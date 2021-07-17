@@ -1,0 +1,6 @@
+[submodule "Embedded-Systems"]
+	path = Embedded-Systems
+	url = https://github.com/kctolli/Embedded-Systems
+[submodule "Golang"]
+	path = Golang
+	url = https://github.com/kctolli/Golang

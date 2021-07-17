@@ -107,7 +107,7 @@ def pretax():
                 else:
                     base.insert(0, roundhundredth(int(salary - ((salary * (todecimal(retirement))) + year(health) + fsa))))
                     print("You invest ${:.2f} on your flex savings per pay period.".format(roundhundredth(yearweeks(fsa))))
-        elif check == "none" or check == "na" or check == "no":
+        elif check == "none" or check == "na" or check == "no" or check == "0":
             base.insert(0, roundhundredth(int(salary - ((salary * (todecimal(retirement))) + year(health)))))
         else:
             print("Please input either health savings(hsa) or flex savings(fsa).")

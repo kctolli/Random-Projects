@@ -1,9 +1,5 @@
----
-title: "Financial Planner"
-output: 
-  html_document:
-    keep_md: true
----
+Financial Planner
+================
 
 <!--  
     Financial planner - Readme.Rmd
@@ -24,21 +20,19 @@ output:
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -->
 
+This financial planner is a python program. I set this up to help people
+plan the finances for a year.
 
-
-
-
-This financial planner is a python program. I set this up to help people plan the finances for a year. 
-
-DISCLAIMER: This is an estimate for values. This will only give you an idea of what your expenses are and where your money goes.   
-WARNING: The state tax is set for Utah's tax rate which is 4.95%.
+DISCLAIMER: This is an estimate for values. This will only give you an
+idea of what your expenses are and where your money goes.  
+WARNING: The state tax is set for Utah’s tax rate which is 4.95%.
 
 Core Functions:
 
-* getsalary()
-* gethealth()
-* gettax()
-* gettithing()
-* getexpenses()
-* getsavings()
-* getspending()
+  - getsalary()
+  - gethealth()
+  - gettax()
+  - gettithing()
+  - getexpenses()
+  - getsavings()
+  - getspending()
